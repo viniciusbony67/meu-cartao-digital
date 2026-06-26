@@ -1,79 +1,103 @@
-body { 
-  margin: 0;
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); /* Cores ligeiramente mais profundas e modernas */
-  color: #f8fafc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.container { 
-  text-align: center;
-  width: 90%;
-  max-width: 420px;
-  padding: 30px 20px; 
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#0f172a,#1e1b4b);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
 }
 
-.profile-img { 
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  border: 3px solid #10b981; /* Verde esmeralda mais vibrante e profissional */
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3); /* Brilho sutil na foto */
-  margin-bottom: 20px;
-  object-fit: cover;
+.container{
+    width:90%;
+    max-width:420px;
+    text-align:center;
+    padding:35px 25px;
 }
 
-h1 { 
-  margin: 0 0 8px 0;
-  font-size: 1.75rem;
-  font-weight: 700;
-  letter-spacing: -0.025em;
+.profile-img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #10b981;
+    box-shadow:0 0 25px rgba(16,185,129,.4);
+    margin-bottom:20px;
+    transition:.3s;
 }
 
-.subtitle { 
-  color: #10b981;
-  margin-top: 0;
-  margin-bottom: 35px;
-  font-weight: 500; 
-  font-size: 0.95rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase; /* Dá um ar mais "editorial" */
+.profile-img:hover{
+    transform:scale(1.05);
 }
 
-.links { 
-  display: flex;
-  flex-direction: column;
-  gap: 16px; 
+h1{
+    font-size:2rem;
+    font-weight:700;
+    margin-bottom:8px;
 }
 
-.link-card { 
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(8px); /* Efeito de vidro fosco moderno */
-  -webkit-backdrop-filter: blur(8px);
-  padding: 16px 20px;
-  text-decoration: none;
-  color: #e2e8f0;
-  border-radius: 12px; /* Cantos um pouco mais arredondados */
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); /* Animação mais fluida */
+.subtitle{
+    color:#10b981;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:.9rem;
+    margin-bottom:35px;
 }
 
-.link-card:hover { 
-  background: #10b981;
-  color: #0f172a;
-  border-color: #10b981;
-  transform: translateY(-2px) scale(1.01); /* Leve crescimento */
-  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4); /* Sombra colorida no hover */
+.links{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
 }
 
-footer { 
-  margin-top: 50px;
-  font-size: 0.75rem;
-  color: #64748b; 
-  letter-spacing: 0.05em;
+.link-card{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:58px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+    border-radius:16px;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.08);
+    transition:all .3s ease;
+}
+
+.link-card:hover{
+    background:#10b981;
+    color:#0f172a;
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px rgba(16,185,129,.45);
+}
+
+footer{
+    margin-top:45px;
+    color:#94a3b8;
+    font-size:.8rem;
+}
+
+@media (max-width:480px){
+
+    h1{
+        font-size:1.7rem;
+    }
+
+    .profile-img{
+        width:100px;
+        height:100px;
+    }
+
+    .link-card{
+        height:54px;
+    }
+
 }
