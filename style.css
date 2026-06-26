@@ -1,40 +1,79 @@
-body { margin: 0;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
-min-height: 100vh; }
-.container { text-align: center;
-width: 90%;
-max-width: 400px;
-
-padding: 20px; }
-.profile-img { width: 120px;
-height: 120px;
-border-radius: 50%;
-border: 4px solid #4ecca3;
-margin-bottom: 15px; }
-h1 { margin: 10px 0;
-font-size: 1.8rem;
+body { 
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); /* Cores ligeiramente mais profundas e modernas */
+  color: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
 }
-.subtitle { color: #4ecca3;
-margin-bottom: 30px;
-font-weight: 300; }
-.links { display: flex;
-flex-direction: column;
-gap: 15px; }
-.link-card { background: rgba(255, 255, 255, 0.1);
-padding: 15px;
-text-decoration: none;
-color: white;
-border-radius: 8px;
-border: 1px solid rgba(255, 255, 255, 0.2);
-transition: all 0.3s ease; }
-.link-card:hover { background: #4ecca3;
-color: #1a1a2e;
-transform: translateY(-3px); }
-footer { margin-top: 40px;
-font-size: 0.8rem;
-color: #999; }
+
+.container { 
+  text-align: center;
+  width: 90%;
+  max-width: 420px;
+  padding: 30px 20px; 
+}
+
+.profile-img { 
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 3px solid #10b981; /* Verde esmeralda mais vibrante e profissional */
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3); /* Brilho sutil na foto */
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+h1 { 
+  margin: 0 0 8px 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.subtitle { 
+  color: #10b981;
+  margin-top: 0;
+  margin-bottom: 35px;
+  font-weight: 500; 
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase; /* Dá um ar mais "editorial" */
+}
+
+.links { 
+  display: flex;
+  flex-direction: column;
+  gap: 16px; 
+}
+
+.link-card { 
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px); /* Efeito de vidro fosco moderno */
+  -webkit-backdrop-filter: blur(8px);
+  padding: 16px 20px;
+  text-decoration: none;
+  color: #e2e8f0;
+  border-radius: 12px; /* Cantos um pouco mais arredondados */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); /* Animação mais fluida */
+}
+
+.link-card:hover { 
+  background: #10b981;
+  color: #0f172a;
+  border-color: #10b981;
+  transform: translateY(-2px) scale(1.01); /* Leve crescimento */
+  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4); /* Sombra colorida no hover */
+}
+
+footer { 
+  margin-top: 50px;
+  font-size: 0.75rem;
+  color: #64748b; 
+  letter-spacing: 0.05em;
+}
